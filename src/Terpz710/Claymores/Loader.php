@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namepspace Terpz710\Claymores;
+namespace Terpz710\Claymores;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\item\Item;

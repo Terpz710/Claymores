@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namepsace Terpz710\Claymores;
+namepspace Terpz710\Claymores;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\item\Item;

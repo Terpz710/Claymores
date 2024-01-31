@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namepspace Terpz710\Claymores\Event;
+namespace Terpz710\Claymores\Event;
 
 use pocketmine\scheduler\Task;
 use pocketmine\world\Explosion;

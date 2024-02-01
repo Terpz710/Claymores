@@ -7,6 +7,7 @@ namespace Terpz710\Claymores\Task;
 use pocketmine\scheduler\Task;
 use pocketmine\world\Explosion;
 use pocketmine\item\Item;
+use pocketmine\block\VanillaBlocks;
 use pocketmine\math\Vector3;
 
 class ExplosionTask extends Task {
@@ -20,7 +21,7 @@ class ExplosionTask extends Task {
     }
 
     public function onRun() : void {
-        $explosion = new Explosion($this->position, 2.0, $this->world);
+        $explosion = new Explosion($this->position, 6);
         $explosion->explodeA();
         $explosion->explodeB();
         $this->world->setBlock($this->position, VanillaBlocks::AIR());

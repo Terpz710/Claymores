@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Terpz710\Claymores\Event;
 
+use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\scheduler\Task;
 use pocketmine\world\Explosion;
 use pocketmine\event\Listener;
@@ -24,10 +25,12 @@ class EventListener implements Listener {
     public function onInteract(PlayerInteractEvent $event) {
         $player = $event->getPlayer();
         $item = $event->getItem();
+        $block = $event->getBlock();
 
-        if ($item->getTypeId() === VanillaItems::BRICK()->getTypeId()) {
-            $this->plugin->setClaymore($player, $item);
-            $event->cancel();
+        if ($item->getNamedTag(CompoundTag::class) instanceof CompoundTag &&
+            $item->getNamedTag(CompoundTag::class)->getTag("isClaymore", StringTag::class)) {
+            $this->plugin->setClaymore($player, $item, $block);
+            $player->getInventory()->removeItem($item->setCount(1));
         }
     }
 }

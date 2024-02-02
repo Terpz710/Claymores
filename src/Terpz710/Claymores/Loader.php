@@ -27,8 +27,8 @@ class Loader extends PluginBase {
     public function createClaymore(Player $player, int $amount): Item {
         $claymoreItem = VanillaItems::BRICK();
         $claymoreItem->getNamedTag()->setString("isClaymore", "");
-        $claymoreItem->setCustomName("Claymore");
-        $lore = ["Deadly explosive device"];
+        $claymoreItem->setCustomName("§r§l§eClaymore");
+        $lore = ["§r§5Deadly explosive device"];
         $claymoreItem->setLore($lore);
         return $claymoreItem;
     }

@@ -16,7 +16,7 @@ class ClaymoreCommand extends Command {
     private $plugin;
 
     public function __construct(Loader $plugin) {
-        parent::__construct("giveclaymore", "Give a claymore", "/giveclaymore [player] <amount>");
+        parent::__construct("giveclaymore", "Give a claymore", "/giveclaymore [player]");
         $this->plugin = $plugin;
         $this->setPermission("claymores.cmd");
     }
@@ -24,7 +24,7 @@ class ClaymoreCommand extends Command {
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
         if ($sender instanceof Player) {
             if (count($args) !== 2) {
-                $sender->sendMessage("Usage:§e /giveclaymore [player] [amount]");
+                $sender->sendMessage("Usage:§e /giveclaymore [player]");
                 return true;
             }
 
@@ -44,7 +44,7 @@ class ClaymoreCommand extends Command {
             $claymoreItem = $this->plugin->createClaymore($sender, $amount);
             $targetPlayer->getInventory()->addItem($claymoreItem);
 
-            $sender->sendMessage("§l§a(!)§r§f Given $amount to §e{$targetPlayer->getName()}§f!");
+            $sender->sendMessage("§l§a(!)§r§f Given a claymore to §e{$targetPlayer->getName()}§f!");
 
             return true;
         } else {

@@ -1,10 +1,10 @@
 # Status
 
-WORKING
+* WORKING
 
 # STAGE
 
-BETA
+* BETA
 
 # STILL UNDERDEVELOPMENT!
 
@@ -12,3 +12,7 @@ BETA
 
 * Claymore item
 * Claymore command
+
+# Known issues
+
+* NONE :)

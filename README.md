@@ -1,18 +1,5 @@
-# Status
+# Claymores
 
-* WORKING
+This plugin is still underdevelopment!
 
-# STAGE
-
-* BETA
-
-# STILL UNDERDEVELOPMENT!
-
-# Current features
-
-* Claymore item
-* Claymore command
-
-# Known issues
-
-* NONE :)
+feel free to contribute!

@@ -4,3 +4,7 @@ author: Terpz710
 api: 5.0.0
 main: Terpz710\Claymores\Loader
 description: Adds claymores to PMMP
+
+permissions:
+  claymores.cmd:
+    default: op

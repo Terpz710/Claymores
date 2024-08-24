@@ -37,7 +37,6 @@ class Loader extends PluginBase {
     public function setClaymore(Player $player, Item $item, Block $block): void {
         $position = $block->getPosition();
         $world = $player->getWorld();
-        $world->setBlock($position, VanillaBlocks::REDSTONE());
         $this->getScheduler()->scheduleDelayedTask(new ExplosionTask($position, $world), 60);
     }
 }
